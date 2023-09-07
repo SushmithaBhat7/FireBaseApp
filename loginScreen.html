@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-elements">
+        <button id="signin-btn">Sign in with Google</button>
+      </div>
+    </div>
+  </body>
+</html>
+<script type="module">
+  import { onLogin, onAlreadyLogin } from "./Assets/login.js";
+  const signInBtnElem = document.getElementById("signin-btn");
+  signInBtnElem.addEventListener("click", onLogin);
+
+  // It will check to login
+  onAlreadyLoggedIn();
+</script>

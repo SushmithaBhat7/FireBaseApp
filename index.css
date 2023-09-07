@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+  }
+  #user {
+    display: none;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12px;
+    background-color: #fff;
+    height: 92px;
+    box-shadow: 1px 1px 1px 1px silver;
+  }
+
+  section {
+    padding: 12px;
+  }
