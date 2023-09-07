@@ -19,7 +19,7 @@ let userDetails = null;
 export const validateUserDetails = () => {
   auth.onAuthStateChanged((user) => {
     if (!user) {
-      // window.location.href = "../loginScreen.html";
+      window.location.href = "/FireBaseApp/loginScreen.html";
       return;
     }
     userDetails = user;
@@ -50,7 +50,7 @@ export const onLogOutUser = () => {
   signOut(auth)
     .then(() => {
       // Sign-out successful.
-      // window.location.href = "../loginScreen.html";
+      window.location.href = "/FireBaseApp/loginScreen.html";
     })
     .catch((error) => {
       // An error happened.

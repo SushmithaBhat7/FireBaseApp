@@ -33,6 +33,6 @@ export const onAlreadyLogin = () => {
       return;
     }
     //If user is found redirect to Homepage
-    window.location.href = "../index.html";
+    window.location.href = "/FireBaseApp/index.html";
   });
 };
