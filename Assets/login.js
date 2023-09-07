@@ -11,10 +11,14 @@ import { FIREBASE_CONFIG } from "./firebase.config.local.js";
 
 const app = initializeApp(FIREBASE_CONFIG);
 const provider = new GoogleAuthProvider();
+const providerFB = new FacebookAuthProvider();
 const auth = getAuth(app);
 
 export const onLogin = () => {
   signInWithRedirect(auth, provider);
+};
+export const onLoginFB = () => {
+  signInWithRedirect(auth, providerFB);
 };
 getRedirectResult(auth)
   .then((result) => {
@@ -26,6 +30,7 @@ getRedirectResult(auth)
     // Handle Errors here.
     console.log(error);
   });
+
 export const onAlreadyLogin = () => {
   auth.onAuthStateChanged((user) => {
     console.log("user: ", user);

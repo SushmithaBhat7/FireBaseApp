@@ -9,14 +9,18 @@
     <div class="container">
       <div class="form-elements">
         <button id="signin-btn">Sign in with Google</button>
+        <button id="signin-btn-fb">Sign in with FaceBook</button>
       </div>
     </div>
   </body>
 </html>
 <script type="module">
-  import { onLogin, onAlreadyLogin } from "./Assets/login.js";
+  import { onLogin, onLoginFB, onAlreadyLogin } from "./Assets/login.js";
   const signInBtnElem = document.getElementById("signin-btn");
   signInBtnElem.addEventListener("click", onLogin);
+
+  const signInBtnFbElem = document.getElementById("signin-btn-fb");
+  signInBtnFbElem.addEventListener("click", onLoginFB);
 
   // It will check to login
   onAlreadyLogin();
